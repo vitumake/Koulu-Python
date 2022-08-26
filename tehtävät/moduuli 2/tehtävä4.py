@@ -1,0 +1,8 @@
+print('Anna kolme lukua.')
+luku1 = int(input('Luku 1: '))
+luku2 = int(input('Luku 2: '))
+luku3 = int(input('Luku 3: '))
+summa = str(luku1 + luku2 + luku3)
+tulo = str(luku1 * luku2 * luku3)
+keskiA = str(int(summa) / 3)
+print('Lukujen arvot. \nSumma: ' + summa + '\nTulo: ' + tulo + '\nKeskiarvo: ' + keskiA)
