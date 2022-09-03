@@ -4,5 +4,5 @@ while ((luku.strip('-')).replace('.', '')).isnumeric():
         pieni=float(luku)
     elif float(luku)>float(suuri):
         suuri=float(luku)
-    luku = input('Anna luku: ')
+    luku=input('Anna luku: ')
 print('Suurin luku: ' + str(suuri) + '\nPienin luku: ' + str(pieni))

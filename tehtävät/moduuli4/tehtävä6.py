@@ -3,9 +3,7 @@ import random
 n=0
 N=int(input('Anna testattavien pistiden määrä: '))
 for i in range(N):
-    pisteX = random.uniform(-1, 1)
-    pisteY = random.uniform(-1, 1)
-    if pow(pisteX, 2) + pow(pisteY, 2) < 1:
+    if pow(random.uniform(-1, 1), 2) + pow(random.uniform(-1, 1), 2) < 1:
         n+=1
-print('Pii:n likiarvo on: ' + str(4*n/N))
-print('Pii:n vakio math librarysta: ' + str(math.pi))
+print('Pi:n likiarvo on: ' + str(4*n/N))
+print('Pi:n vakio math librarysta: ' + str(math.pi))
