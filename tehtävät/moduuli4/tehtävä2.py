@@ -1,5 +1,4 @@
 tuuma=float(input('Anna mitta tuumissa: '))
-while tuuma>-1:
+while tuuma>=0:
     tuuma=float(input('Anna mitta tuumissa: '))
-    if tuuma>=0:
-        print(str(tuuma*2.54) + 'cm')
+    print(str(tuuma*2.54) + 'cm')
