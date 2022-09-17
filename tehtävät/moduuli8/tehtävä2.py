@@ -18,8 +18,8 @@ def getAirportTypes(y):
     kursori.execute(f"SELECT DISTINCT type FROM airport")
     return kursori.fetchall()
 iso=input('Anna maatunniste: ')
-if getAirportTypeCount(yhteys, iso, 'small_airport')==0: exit('Koodia ei löydetty')
+if getAirportTypeCount(yhteys, iso, 'small_airport')==0: exit('Virheellinen maakooodi')
 print(f'Koodilla "{iso}" löytyi: ')
 aTypes=getAirportTypes(yhteys)
 for i in aTypes:
-    print(f'{i[0]}: {getAirportTypeCount(yhteys, iso, i[0])}')
+    print(f'{i[0].replace("_", " ")}: {getAirportTypeCount(yhteys, iso, i[0])}')

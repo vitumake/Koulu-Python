@@ -14,4 +14,4 @@ yhteys = mysql.connector.connect(
          autocommit=True
          )
 tulos=etsiLentok(yhteys, input('Anna lentokentän ICAO tunniste: ').upper())
-print(f'Lentokentän nimi on {tulos[0]} ja sen sijantikunta on {tulos[1]}')
+print(f'Lentokentän nimi on "{tulos[0]}" ja sen sijantikunta on "{tulos[1]}"')
