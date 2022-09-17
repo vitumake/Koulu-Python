@@ -9,17 +9,17 @@ yhteys = mysql.connector.connect(
          autocommit=True
          )
 
-def countAirportByIsoNType(yhteys, iso, type):
-    kursori = yhteys.cursor()
+def getAirportTypeCount(y, iso, type):
+    kursori = y.cursor()
     kursori.execute(f"SELECT COUNT(*) FROM airport WHERE iso_country='{iso}' AND type='{type}';")
     return kursori.fetchone()[0]
-iso=input('Anna maan ISO koodi: ').upper()
-print(
-    f'ISO koodilla "{iso}" löytyi:'
-    f'\n{countAirportByIsoNType(yhteys, iso, "large_airport")} suurta kenttää'
-    f'\n{countAirportByIsoNType(yhteys, iso, "medium_airport")} keskisuurta kenttää'
-    f'\n{countAirportByIsoNType(yhteys, iso, "small_airport")} pientä kenttää'
-    f'\n{countAirportByIsoNType(yhteys, iso, "heliport")} helikopteri kenttää'
-    f'\n{countAirportByIsoNType(yhteys, iso, "seaplane_base")} vesilentokenttää'
-    f'\n{countAirportByIsoNType(yhteys, iso, "closed")} suljettua kenttää'
-)
+def getAirportTypes(y):
+    kursori=y.cursor()
+    kursori.execute(f"SELECT DISTINCT type FROM airport")
+    return kursori.fetchall()
+iso=input('Anna maatunniste: ')
+if getAirportTypeCount(yhteys, iso, 'small_airport')==0: exit('Koodia ei löydetty')
+print(f'Koodilla "{iso}" löytyi: ')
+aTypes=getAirportTypes(yhteys)
+for i in aTypes:
+    print(f'{i[0]}: {getAirportTypeCount(yhteys, iso, i[0])}')
