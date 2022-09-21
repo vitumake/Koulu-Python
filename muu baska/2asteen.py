@@ -1,4 +1,5 @@
 import math
+from fractions import Fraction
 
 def ratkaise2ay(a, b, c):
     try:
@@ -14,8 +15,8 @@ while True:
     b=float(input('Anna b komponentti '))
     c=float(input('Anna c komponentti '))
     vast=ratkaise2ay(a, b, c)
-    if vast[0]==vast[1]: vastS=='{' + str(vast[0]) + '}'
-    elif vast[0] and vast[1] == 'null': vastS='{}'
-    else: vastS = '{' + f'{vast[0]}, {vast[1]}' + '}'
+    if vast[0] and vast[1] == 'null': vastS='{}'
+    elif vast[0]==vast[1]: vastS='{' + str(Fraction(vast[0]).limit_denominator()) + '}'
+    else: vastS = '{' + f'{Fraction(vast[0]).limit_denominator()}, {Fraction(vast[1]).limit_denominator()}' + '}'
     print(vastS)
     if input('type e to exit: ').upper()=='E': break
