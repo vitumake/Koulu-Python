@@ -7,10 +7,15 @@ def ratkaise2ay(a, b, c):
     try:
         negX=(((-1)*b)-math.sqrt(pow(b,2)-4*a*c))/(2*a)
     except: negX='null'
-    return "{" + f'{posX}, {negX}' + "}"
+    return[posX, negX]
 
-a=float(input('Anna a komponentti '))
-b=float(input('Anna b komponentti '))
-c=float(input('Anna c komponentti '))
-if ratkaise2ay(-1, 1, -2)=='{null, null}': print('{}')
-else: print(ratkaise2ay(a, b, c))
+while True:
+    a=float(input('Anna a komponentti '))
+    b=float(input('Anna b komponentti '))
+    c=float(input('Anna c komponentti '))
+    vast=ratkaise2ay(a, b, c)
+    if vast[0]==vast[1]: vastS=='{' + str(vast[0]) + '}'
+    elif vast[0] and vast[1] == 'null': vastS='{}'
+    else: vastS = '{' + f'{vast[0]}, {vast[1]}' + '}'
+    print(vastS)
+    if input('type e to exit: ').upper()=='E': break
