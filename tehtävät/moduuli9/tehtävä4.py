@@ -31,5 +31,7 @@ while kilpailu:
         i.kiihdytä(randint(-10, 15))
         i.kulje(1)
         if i.kuljettu > 10000:
-            print(f'{i.rekkari}')
             kilpailu = False
+
+for i in autot:
+    print(f'{i}\n')
