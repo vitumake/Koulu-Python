@@ -54,4 +54,5 @@ while not kilpailuOhi:
         kilpailuOhi = True
     if tunteja == 10:
         tunteja = 0
-        kisa.tulostaTilanne()    
+        kisa.tulostaTilanne()
+    tunteja += 1    
