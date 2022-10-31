@@ -1,0 +1,75 @@
+
+/*Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*Vars*/
+:root{
+    --dark: #393839;
+    --ldark: #6E525D;
+    --dorange: #AA6C6E;
+    --orange: #DE8F6E;
+    --lorange: #FABF68;
+    --yellow: #F9F871;
+}
+
+/*Remove padding*/
+body{
+    padding: 0;
+    margin: 0;
+}
+
+/*Divs*/
+.body > div {
+    padding: 0px 0;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+/*Grid items*/
+
+/*Title*/
+.title{
+    grid-area: title;
+    text-align: left;
+    background-color: var(--orange);
+}
+
+.title > h1{
+    font-style: bold;
+    font-size: 30px;
+    padding: 10px;
+}
+
+/*Navigation*/
+
+.nav > button{
+    font-size: 20px;
+    border: none;
+    background-color: var(--orange);
+    padding: 40px 50px;
+}
+
+.nav > button:hover{
+    background-color: var(--lorange);
+}
+
+.nav{
+    grid-area: nav;
+    text-align: right;
+    background-color: var(--orange)
+}
+
+/*Main doc*/
+.main{
+    grid-area: main;
+    text-align: center;
+}
+
+/*Site body*/
+.body {
+    display: grid;
+    grid-template-areas:
+        'title nav nav nav'
+        'main main main main';
+        background-color: var(--dark);
+}
