@@ -26,7 +26,8 @@ lat = result[0]['lat']
 params = {
     'lon':lon,
     'lat':lat,
-    'appid':apiKey
+    'appid':apiKey,
+    'lang':'FI'
 }
 
 #Haetaan sää
