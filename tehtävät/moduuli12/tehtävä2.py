@@ -12,10 +12,11 @@ params = {
 
 #Haetaan rajapinnasta ensin kunnan koordinaatit
 pos = requests.get('http://api.openweathermap.org/geo/1.0/direct', params)
-result = pos.json()
 
-#Jos vastaus on tyhjä poistu
-if result == []: exit('Valintaa ei löytynyt')
+#Jos vastaus ei ok
+if not pos.ok : exit('Valintaa ei löytynyt')
+
+result = pos.json()
 
 #Otetaan koordinaatit talteen
 lon = result[0]['lon']
@@ -30,10 +31,11 @@ params = {
 
 #Haetaan sää
 weather = requests.get('https://api.openweathermap.org/data/2.5/weather', params)
-result = weather.json()
 
-#Jos vastaus on tyhjä
-if result == []: print('Säätä ei saatavilla.')
+#Jos vastaus ei ok
+if not weather.ok: exit('Säätä ei saatavilla')
+
+result = weather.json()
 
 desc = result['weather'][0]['description']
 temp = result['main']['temp']
