@@ -41,8 +41,4 @@ result = weather.json()
 desc = result['weather'][0]['description']
 temp = result['main']['temp']
 
-#Kelvinit Celcius asteiksi'
-temp -= 273.15
-temp = round(temp)
-
-print(f'{kunta} \n {temp}°C \n {desc}')
+print(f'{kunta} \n {round(temp - 273.15)}°C \n {desc}')
