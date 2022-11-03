@@ -12,10 +12,13 @@
     --yellow: #F9F871;
 }
 
-/*Remove padding*/
+/*Body*/
 body{
     padding: 0;
     margin: 0;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /*Divs*/
@@ -42,14 +45,14 @@ body{
 
 /*Navigation*/
 
-.nav > button{
+.nav > a > button{
     font-size: 20px;
     border: none;
     background-color: var(--orange);
     padding: 40px 50px;
 }
 
-.nav > button:hover{
+.nav > a > button:hover{
     background-color: var(--lorange);
 }
 
@@ -71,5 +74,24 @@ body{
     grid-template-areas:
         'title nav nav nav'
         'main main main main';
-        background-color: var(--dark);
+    background-color: transparent;
+}
+
+/*Ids*/
+#bg1 {
+    background-image: 
+    linear-gradient(to bottom, transparent, var(--dark)),
+    url("./assets/bg.jpg");
+    background-size: cover;
+}
+
+#il1 {
+    margin: 250px;
+    padding: 20px;
+    background-color: var(--dark);
+    border-radius: 50px;
+}
+
+#il1 > h1{
+    text-shadow: 0 0 4px var(--lorange);
 }
