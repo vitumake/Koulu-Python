@@ -21,6 +21,10 @@ body{
     background-attachment: fixed;
 }
 
+a {
+    font-family: 'Roboto', sans-serif;
+}
+
 /*Divs*/
 .body > div {
     padding: 0px 0;
@@ -44,22 +48,17 @@ body{
 }
 
 /*Navigation*/
-
-.nav > a > button{
-    font-size: 20px;
-    border: none;
+.nav {
+    font-size: 25px;
+    text-align: center;
     background-color: var(--orange);
-    padding: 40px 50px;
+    padding: 30px;
+    text-decoration: none;
+    color: black;
 }
 
-.nav > a > button:hover{
+.nav:hover{
     background-color: var(--lorange);
-}
-
-.nav{
-    grid-area: nav;
-    text-align: right;
-    background-color: var(--orange)
 }
 
 /*Main doc*/
@@ -72,8 +71,8 @@ body{
 .body {
     display: grid;
     grid-template-areas:
-        'title nav nav nav'
-        'main main main main';
+        'title title nav1 nav2 nav3'
+        'main main main main main';
     background-color: transparent;
 }
 
