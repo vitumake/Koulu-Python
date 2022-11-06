@@ -78,6 +78,8 @@ body{
 }
 
 /*Ids*/
+
+/*Backgrounds*/
 #bg1 {
     background-image: 
     linear-gradient(to bottom, transparent, var(--dark)),
@@ -85,13 +87,11 @@ body{
     background-size: cover;
 }
 
+/*Islands*/
 #il1 {
     margin: 250px;
     padding: 20px;
     background-color: var(--dark);
     border-radius: 50px;
-}
-
-#il1 > h1{
-    text-shadow: 0 0 4px var(--lorange);
+    border-color: var(--orange);
 }
