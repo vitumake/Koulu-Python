@@ -77,6 +77,22 @@ body{
     background-color: transparent;
 }
 
+/*Products grid*/
+.products {
+    display: grid;
+    grid-template-areas: 
+        'product1 product2 product3'
+        'product4 product5 product6';
+    background-color: transparent;    
+}
+
+/*Contact grid*/
+.contact {
+    display: grid;
+    grid-template-areas:
+        'contact contactImg';
+}
+
 /*Ids*/
 
 /*Backgrounds*/
@@ -89,9 +105,28 @@ body{
 
 /*Islands*/
 #il1 {
-    margin: 250px;
-    padding: 20px;
+    margin: 200px;
+    margin-bottom: 50px;
+    padding: 50px;
     background-color: var(--dark);
     border-radius: 50px;
     border-color: var(--orange);
+}
+
+#il2 {
+    margin: 100px;
+    margin-bottom: 50px;
+    padding: 25px;
+    background-color: var(--dark);
+    border-radius: 50px;
+    border-color: var(--orange);
+}
+
+
+#left{
+    text-align: left;
+}
+
+#right{
+    text-align: right;
 }
