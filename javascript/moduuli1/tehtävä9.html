@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>tehtävä9</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        tehtävä9
+        <br>
+        <ul id="result"></ul>
+    </body>
+
+    <script>
+        'use strict';
+        let testInt = prompt('Anna numero')
+        document.getElementById('result').innerHTML = testInt   
+        for(let i=2; i<testInt; i++){
+            if(testInt%i==0){
+                testInt = true
+                break
+            }
+            testInt = false
+        }
+        document.getElementById('result').innerHTML += testInt ? ' is not a prime number' : ' is a prime number'
+    </script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>tehtävä10</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        tehtävä10
+        <br>
+        <ul id="result"></ul>
+    </body>
+
+    <script>
+        let dice = prompt('Number of dice')
+        let prediction = prompt('Predicted sum of dice')
+        let iter = 10000
+        let sum
+        let propability = 0
+
+        for(let i=0; i<iter; i++){
+            sum = 0
+            for(let ir=0; ir<dice; ir++){
+                sum += Math.floor(Math.random()*6)+1
+            }
+            if(sum==prediction){propability++}
+        }
+        document.getElementById('result').innerHTML = `Probability to get sum ${prediction} with ${dice} dice is ${(propability/iter*100).toFixed(2)}%`
+    </script>
+</html>
