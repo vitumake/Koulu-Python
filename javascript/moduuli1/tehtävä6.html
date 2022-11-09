@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>tehtävä6</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        tehtävä6
+        <br>
+        <p id="result"></p>
+    </body>
+
+    <script>
+        'use strict';
+        const doCalc = confirm('Should I calculate the square root?')
+        var result
+
+        if(doCalc){
+            const num = prompt('Number')
+            result = (num > 0 ? Math.sqrt(num) : 'The square root of a negative number is not defined')
+        }
+        else result = 'The square root is not calculated'
+
+        document.getElementById('result').innerHTML = result
+    </script>
+
+</html>

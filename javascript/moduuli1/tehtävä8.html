@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>tehtävä8</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        tehtävä8
+        <br>
+        <ul id="result"></ul>
+    </body>
+
+    <script>
+        'use strict';
+        let start = prompt('Anna alku vuosi')
+        let end = prompt('Anna loppu vuosi')
+        const list = document.getElementById('result')
+        console.log(list)
+
+        if(start>end) [start, end] = [end, start]
+
+        for(let i = start; i<=end; i++){
+            var leap = (i%4==0 && i%100!=0 || i%100==0 && i%400==0 ? true : false)
+            if(leap){
+                let node = document.createElement('LI')
+                let val = list.appendChild(node)
+                node.innerHTML = i
+            }
+        }
+    </script>
+
+</html>
