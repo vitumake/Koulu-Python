@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>tehtävä4</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        tehtävä4
+        <br>
+        <p id="result"></p>
+    </body>
+
+    <script>
+        'use strict';
+        const name = prompt('Anna nimesi')
+        const houseVal = Math.floor(Math.random() * 3 + 1)
+        var house
+    
+        switch(houseVal){
+            case 1:
+                house = 'Daredevil'
+                break
+            case 2:
+                house = 'Hufflepuff'
+                break
+            case 3:
+                house = 'Ravenclaw'
+                break
+            case 4:
+                house = 'Slytherin'
+                break    
+        }
+
+        document.getElementById('result').innerHTML = name + ', you are a ' + house
+    </script>
+
+</html>

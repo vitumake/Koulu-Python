@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>tehtävä2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        tehtävä2
+        <br>
+        <p id="tervehdys"></p>
+    </body>
+
+    <script>
+        'use strict';
+        var nimi = prompt('Nimi: ')
+        const tervehdys = 'Hello, ' + nimi + '!'
+        console.log(tervehdys)
+        document.getElementById('tervehdys').innerHTML = tervehdys
+    </script>
+
+</html>

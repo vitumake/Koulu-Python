@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>tehtävä3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        tehtävä3
+        <br>
+        <p id="result"></p>
+    </body>
+    <script>
+        'use strict';
+
+        var int1 = prompt('Numero 1')
+        var int2 = prompt('Numero 2')
+        var int3 = prompt('Numero 3')
+
+        const sum = int1 + int2 + int3
+        const product = int1 * int2 * int3
+        const average = sum / 3
+
+        document.getElementById('result').innerHTML = 'Sum: ' + sum + '<br> Product: ' + product + '<br> Average: ' + average
+        
+    </script>
+</html>

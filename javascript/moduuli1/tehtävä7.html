@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>tehtävä7</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        tehtävä7
+        <br>
+        <p id="result"></p>
+    </body>
+
+    <script>
+        'use strict';
+        
+        const dice = prompt('Anna noppien lukumäärä')
+        var sum = 0
+
+        for(let i=0; i<=dice; i++) sum += Math.floor(Math.random() * 5 + 1)
+        document.getElementById('result').innerHTML = sum
+    </script>
+
+</html>
