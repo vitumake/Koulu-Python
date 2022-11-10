@@ -5,12 +5,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
-        <script>
-            'use strict';
-            console.log('Im printing to console');
-        </script>
     </head>
     <body>
         tehtävä1
     </body>
+    <script>
+        'use strict';
+        let arr = []
+        for(let i=0; i<5; i++){
+            arr.push(prompt('Anna numero'))
+        }
+        for(let i=arr.length-1; i>=0; i--) console.log(arr[i])
+    </script>
 </html>

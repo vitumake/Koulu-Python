@@ -23,7 +23,7 @@
         for(let i = start; i<=end; i++){
             if(i%4==0 && i%100!=0 || i%100==0 && i%400==0){
                 let node = document.createElement('LI')
-                let val = list.appendChild(node)
+                list.appendChild(node)
                 node.innerHTML = i
             }
         }

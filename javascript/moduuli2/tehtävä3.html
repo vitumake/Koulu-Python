@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>m2t3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <p>m2t3</p>
+        <ul id="result"></ul>
+    </body>
+    <script>
+        'use strict';
+        let dogs = []
+        const list = document.getElementById('result')
+        for(let i = 0; i<6; i++){
+            dogs.push(prompt('Anna koiran nimi'))
+        }
+        dogs.sort()
+        dogs.reverse()
+        for(let i of dogs){
+            let node = document.createElement('LI')
+            list.appendChild(node)
+            node.innerHTML = i
+        }
+    </script>
+</html>
