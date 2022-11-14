@@ -1,5 +1,5 @@
-from flask import Flask
 from json import dumps
+from flask import Flask
 
 app = Flask(__name__)
 @app.route('/alkuluku/<luku>')
