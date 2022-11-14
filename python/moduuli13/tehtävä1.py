@@ -7,7 +7,9 @@ def alkuluku(luku):
     luku=int(luku)
     for i in range(luku-1, 0, -1):
         if i==1: prime = True
-        elif luku%i==0: prime = False
+        elif luku%i==0: 
+            prime = False
+            break
     return dumps({
         'Number':luku,
         'isPrime':prime
