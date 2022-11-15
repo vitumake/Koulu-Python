@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>m2t7</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <p>m2t7</p>
+        <ul id="result"></ul>
+    </body>
+    <script>
+        'use strict';
+        const list = document.getElementById('result')
+        function rollDice(sides){
+            return Math.floor(Math.random()*sides)+1
+        }
+        let roll
+        let sides=prompt('Anna nopan sivujen määrä')
+        do{
+            roll=rollDice(sides)
+            let node=document.createElement('LI')
+            list.appendChild(node)
+            node.innerHTML=roll
+        }while(roll!=sides)
+    </script>
+</html>

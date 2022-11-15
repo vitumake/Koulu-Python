@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>m2t6</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <p>m2t6</p>
+        <ul id="result"></ul>
+    </body>
+    <script>
+        'use strict';
+        const list = document.getElementById('result')
+        function rollDice(){
+            return Math.floor(Math.random()*6)+1
+        }
+        let roll
+        do{
+            roll=rollDice()
+            let node=document.createElement('LI')
+            list.appendChild(node)
+            node.innerHTML=roll
+        }while(roll!=6)
+    </script>
+</html>

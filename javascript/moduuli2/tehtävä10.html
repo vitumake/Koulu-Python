@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>m2t10</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <p>m2t10</p>
+        <p id="result"></p>
+    </body>
+    <script>
+        'use strict';
+        let candList=[]
+        const candNum=prompt('Number of candidates')
+        for(let i=1;i<=candNum;i++){
+            candList.push({
+                name: prompt(`Name for candidate number ${i}`),
+                votes: 0
+            })
+        }
+        const voters=prompt('Number of voters')
+        let empty=0
+        let cand
+        let candVote
+        for(let i=0;i<voters;i++){
+            candVote=prompt('Enter candidate name to vote')
+            cand=candList.find(a=>a.name==candVote)
+            typeof(cand)==='undefined'?empty++:cand.votes++
+        }
+        candList.sort((a,b)=>b.votes-a.votes)
+        let results='The winner is ${candList[0].name} with ${candList[0].votes} votes\nResults:\n'
+        for(let i of candList)results += `${i.name}: ${i.votes}\n`
+        console.log(results+=`empty: ${empty}`)
+    </script>
+</html>

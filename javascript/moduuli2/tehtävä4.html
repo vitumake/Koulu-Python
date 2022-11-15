@@ -12,13 +12,12 @@
     </body>
     <script>
         'use strict';
-        const arr = []
+        const arr=[]
         do {
-            var val = parseInt(prompt('Anna numero'))
-            val!=0&&!isNaN(val)?arr.push(val):null
-        } while(val!=0 && !isNaN(val))
+            var val=parseInt(prompt('Anna numero'))
+            arr.push(isNaN(val)?0:val)
+        } while(!arr.includes(0))
         arr.sort((a,b)=>{return b-a})
-        arr.reverse()
-        for(let i of arr) console.log(i)
+        for(let i of arr)console.log(i)
     </script>
 </html>
