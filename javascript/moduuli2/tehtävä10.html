@@ -30,7 +30,7 @@
             typeof(cand)==='undefined'?empty++:cand.votes++
         }
         candList.sort((a,b)=>b.votes-a.votes)
-        let results='The winner is ${candList[0].name} with ${candList[0].votes} votes\nResults:\n'
+        let results=`The winner is ${candList[0].name} with ${candList[0].votes} votes\nResults:\n`
         for(let i of candList)results += `${i.name}: ${i.votes}\n`
         console.log(results+=`empty: ${empty}`)
     </script>
