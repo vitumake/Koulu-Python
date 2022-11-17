@@ -13,3 +13,9 @@ const students = [
     id: '5423679',
   },
 ];
+for(const i of students){
+  const node = document.createElement('OPTION')
+  document.getElementById('target').appendChild(node)
+  node.innerHTML = i.name
+  node.value = i.id
+}

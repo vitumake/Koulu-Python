@@ -93,3 +93,24 @@ const picArray = [
 ];
 
 // add your code here
+function createArticle(obj){
+  const article = document.createElement('article')
+  const figure = document.createElement('figure')
+  const img = document.createElement('img')
+  const figcapt = document.createElement('figcaption')
+
+  article.className = 'card'
+  article.innerHTML += `<h2>${obj.title}</h2>`
+  article.appendChild(figure)
+  figure.appendChild(img)
+  img.src = obj.image.medium
+  img.alt = obj.title
+  figure.appendChild(figcapt)
+  figcapt.innerHTML = obj.caption
+  article.innerHTML += `<p>${obj.description}</p>`
+  return article
+}
+
+for(const i of picArray){
+  document.getElementById('pictures').appendChild(createArticle(i))
+}
