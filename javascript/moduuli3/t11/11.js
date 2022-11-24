@@ -115,7 +115,7 @@ function createArticle(obj){
   article.addEventListener('click', e=>{
     dialog.showModal()
     dialogImg.src = obj.image.large
-    img.alt = obj.title
+    dialogImg.alt = obj.title
   })
 
   span.addEventListener('click', e=>{
