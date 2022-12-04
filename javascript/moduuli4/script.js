@@ -19,7 +19,7 @@ function createArticle(obj){
     article.appendChild(figure)
     figure.appendChild(img)
     figure.appendChild(figcapt)
-    figcapt.innerHTML = obj.genres.join(' | ')
+    figcapt.innerHTML = obj.genres.length?obj.genres.join(' | '):'<i>no genres</i>'
     img.src = obj.image!=null?obj.image.medium:'./assets/err.svg'
     img.alt = obj.name
     article.innerHTML += obj.summary!=null?obj.summary:'<i>no summary</i><br><br>'
