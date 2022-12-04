@@ -1,0 +1,137 @@
+html {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+  }
+  
+  /*Remove ugly default styling*/
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0ddd5;
+  }
+  
+  .container {
+    width: 100rem;
+    margin: auto;
+  }
+  
+  header {
+    background-color: #3ea9dd;
+    padding: 1rem;
+    color: #fff;
+  }
+  
+  main {
+    background-color: #fff;
+    padding: 1rem;
+  }
+  
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+  }
+  
+  article {
+    width: calc(100% / 4 - 2rem);
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 0.2rem solid #ccc;
+    padding: 1rem;
+    box-shadow: 3px 6px 6px #ccc;
+  }
+
+  article a {
+    text-decoration: underline;
+  }
+
+  article a:hover {
+    color:#3ea9dd;
+  }
+
+  article h2 {
+    margin: 0;
+    text-align: center;
+    padding: 0 0 0.5rem 0;
+  }
+  
+  figure {
+    margin: 0;
+    text-align: center;
+  }
+  
+  figure img {
+    width: 60%;
+  }
+  
+  figcaption {
+    text-align: center;
+  }
+  
+  footer {
+    background-color: #3ea9dd;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  dialog {
+    position: fixed;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    display: block;
+  }
+  
+  dialog[open] {
+    opacity: 1;
+  }
+  
+  dialog::backdrop {
+    background: rgb(0 0 0 / 0.8);
+  }
+  
+  dialog span {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #fff;
+    filter: drop-shadow(2px 2px 2px #000);
+  }
+
+  dialog span:hover {
+    cursor: pointer;
+    transform: scale(0.8);
+  }
+
+  input[type=submit] {
+    background-color: #fff;
+    border: none;
+    color: black;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 2rem 1rem;
+    cursor: pointer;
+    border: 0.2rem solid #ccc;
+  }
+
+  input[type=submit]:hover {
+    border: 0.2rem solid #555;
+  }
+
+  input[type=text] {
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    margin: 2rem 1rem;
+    border: 0.2rem solid #ccc;
+    outline: none;
+  }
+
+  input[type=text]:focus {
+    border: 0.2rem solid #555;
+  }
